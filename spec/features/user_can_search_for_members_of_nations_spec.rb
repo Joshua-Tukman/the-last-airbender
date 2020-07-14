@@ -11,7 +11,15 @@ RSpec.describe "As a visitor" do
       click_on "Search For Members"
 
       expect(current_path).to eq('/search')
-  
+
+      expect(page).to have_content("20 Results")
+
+      within(first(".member")) do
+        expect(page).to have_css(".name")
+        expect(page).to have_css(".affiliation")
+        expect(page).to have_css(".allies")
+        expect(page).to have_css(".enemies")
+      end
     end
   end
 end

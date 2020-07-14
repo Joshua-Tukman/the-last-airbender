@@ -2,10 +2,10 @@
 
 <% @members.each do |member| %>
   <ul class="member">
-    <li><%= member.name %></li>
-    <li><%= member.affiliation%></li>
-    <li><%= member.allies %></li>
-    <li><%= member.enemies %></li>
+    <li class="name"><%= member.name %></li>
+    <li class="affiliation"><%= member.affiliation%></li>
+    <li class="allies"><%= member.allies %></li>
+    <li class="enemies"><%= member.enemies %></li>
     <img src= <%= member.photo %>>
   </ul>
 <%end%>
